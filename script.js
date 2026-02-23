@@ -1,4 +1,3 @@
-// ================= ELEMENTS =================
 const container = document.getElementById("userContainer");
 const reloadBtn = document.getElementById("reloadBtn");
 const errorMsg = document.getElementById("errorMsg");
@@ -7,9 +6,6 @@ const searchInput = document.getElementById("searchInput");
 
 let displayedUsers = [];
 
-// ================= INDIAN DATA =================
-
-// Names (40)
 const indianNames = [
 "Aarav Patel","Vivaan Shah","Aditya Mehta","Krishna Patel",
 "Rohan Desai","Arjun Trivedi","Priya Shah","Ananya Patel",
@@ -23,7 +19,7 @@ const indianNames = [
 "Rajat Khanna","Simran Kaur","Abhishek Tiwari","Muskan Gupta"
 ];
 
-// Emails (40)
+
 const indianEmails = [
 "aarav.patel@gmail.com","vivaan.shah@gmail.com","aditya.mehta@gmail.com",
 "krishna.patel@gmail.com","rohan.desai@gmail.com","arjun.trivedi@gmail.com",
@@ -41,7 +37,6 @@ const indianEmails = [
 "abhishek.tiwari@gmail.com","muskan.gupta@gmail.com"
 ];
 
-// Addresses (40)
 const indianAddresses = [
 {house:"12-A", area:"Navrangpura", city:"Ahmedabad", state:"Gujarat", pin:"380009"},
 {house:"45-B", area:"Adajan", city:"Surat", state:"Gujarat", pin:"395009"},
@@ -85,7 +80,6 @@ const indianAddresses = [
 {house:"95", area:"Electronic City", city:"Bangalore", state:"Karnataka", pin:"560100"}
 ];
 
-// ================= FETCH =================
 async function fetchUsers() {
     loader.style.display = "block";
     errorMsg.textContent = "";
@@ -100,7 +94,6 @@ async function fetchUsers() {
     }
 }
 
-// ================= BUILD USERS =================
 function buildIndianUsers() {
     displayedUsers = indianNames.map((name, i) => ({
         name,
@@ -111,7 +104,6 @@ function buildIndianUsers() {
     renderCards(displayedUsers);
 }
 
-// ================= RENDER =================
 function renderCards(list) {
     container.innerHTML = "";
 
@@ -132,7 +124,6 @@ function renderCards(list) {
     });
 }
 
-// ================= SEARCH =================
 searchInput.addEventListener("input", () => {
     const value = searchInput.value.toLowerCase().trim();
 
@@ -143,8 +134,6 @@ searchInput.addEventListener("input", () => {
     renderCards(filtered);
 });
 
-// ================= RELOAD =================
 reloadBtn.addEventListener("click", fetchUsers);
 
-// ================= START =================
 fetchUsers();

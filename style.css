@@ -11,7 +11,6 @@ body {
     padding: 20px;
 }
 
-/* Header */
 .header {
     text-align: center;
     margin-bottom: 25px;
@@ -22,7 +21,6 @@ body {
     margin-bottom: 5px;
 }
 
-/* Controls */
 .controls {
     margin-top: 15px;
 }
@@ -49,14 +47,12 @@ body {
     transform: scale(1.05);
 }
 
-/* Grid */
 #userContainer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 18px;
 }
 
-/* Glass Card */
 .user-card {
     backdrop-filter: blur(12px);
     background: rgba(255, 255, 255, 0.25);
@@ -70,7 +66,6 @@ body {
     transform: translateY(-6px) scale(1.02);
 }
 
-/* Loader */
 .loader {
     border: 6px solid #f3f3f3;
     border-top: 6px solid #000;
@@ -93,7 +88,6 @@ body {
     margin-top: 15px;
 }
 
-/* Mobile */
 @media (max-width: 500px) {
     #searchInput {
         width: 100%;
