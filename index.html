@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Indian Users Directory</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="header">
+        <h1>Indian Users Directory</h1>
+        <p>Data fetched using Fetch API</p>
+
+        <div class="controls">
+            <input type="text" id="searchInput" placeholder="🔍 Search user...">
+            <button id="reloadBtn">🔄 Reload</button>
+        </div>
+    </div>
+
+    <div id="loader" class="loader"></div>
+
+    <div id="userContainer"></div>
+
+    <p id="errorMsg"></p>
+
+    <script src="script.js"></script>
+</body>
+</html>
